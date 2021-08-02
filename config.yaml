@@ -1,0 +1,24 @@
+---
+train:
+  params:
+    batch_size: 256
+    epoch: 12
+    lr: 0.001
+    decay: 0.1
+    decay_step:
+      - 8
+  save:
+    save_path: "path/to/save/the/model"
+    model_name: "AFF-Net"
+    step: 1
+  data:
+    path: "path/of/the/GazeCapture/dataset"
+test:
+   load:
+      begin_step: 1
+      end_step: 12
+      steps: 1
+      model_name: "AFF-Net"
+      load_path: "path/to/save/the/model"
+   data:
+      path: "path/of/the/GazeCapture/dataset"
